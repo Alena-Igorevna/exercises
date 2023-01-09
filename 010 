@@ -1,0 +1,10 @@
+// вводим трехзначное число, выводим средню цифру 
+
+Console.WriteLine("Введите трехзначное число: ");
+
+int number = Convert.ToInt32(Console.ReadLine);
+
+int firstnumber = number / 10;
+int secondnumber = firstnumber % 10;
+
+System.Console.WriteLine(secondnumber);

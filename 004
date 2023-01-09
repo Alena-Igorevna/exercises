@@ -1,0 +1,12 @@
+// задача4 
+System.Console.WriteLine("Введите первое число: ");
+int a = int.Parse(Console.ReadLine());
+System.Console.WriteLine("Введите второе число: ");
+int b = int.Parse(Console.ReadLine());
+System.Console.WriteLine("Введите третье число: ");
+int с = int.Parse(Console.ReadLine());
+
+if (!(1 > 3) && 2 > 1) 
+{
+    System.Console.WriteLine("da");
+}
