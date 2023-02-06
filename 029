@@ -1,0 +1,23 @@
+//Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+System.Console.WriteLine("Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.");
+Random random = new Random();
+Console.Write("Введите размер массива -> ");
+int size = Convert.ToInt32(Console.ReadLine());
+if (size <= 0)
+{
+    System.Console.WriteLine("Перезапустите программу, Вы ввели неверное значение");
+}
+else
+{
+    int[] newArray = new int[size];
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        newArray[i] = random.Next(100);
+    }
+    System.Console.WriteLine("Вывод массива ");
+
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        System.Console.Write(newArray[i] + " ");
+    }
+}

@@ -1,0 +1,53 @@
+System.Console.WriteLine("Задача 38: Задайте массив вещественных чисел."+
+"Найдите разницу между максимальным и минимальным элементов массива.");
+int[] InitArray(int size)
+{
+    int[] myArray = new int[size];
+    return myArray;
+}
+
+void FillArrayRandomNumbers(int[] array)
+{
+    Random rnd = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = rnd.Next(10, 100);
+    }
+}
+string GetArrayInString(int[] array)
+{
+    return String.Join(",", array);
+}
+int MaxMinEllementsDifference(int[] array)
+{
+    // int max = array.Max();
+    // int min = array.Min();
+    // int difference = max - min;
+    // return difference;
+    int max = array[0], min = array[0], diff = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max)
+        {
+            max = array[i];
+        }
+        else if (array[i] < min)
+        {
+            min = array[i];
+        }
+    }
+    diff = max - min;
+    return diff;
+}
+void PrintArray(int[] array)
+{
+    System.Console.WriteLine(GetArrayInString(array));
+}
+
+Console.Write("Введите размер массива -> ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] array = InitArray(size);
+FillArrayRandomNumbers(array);
+PrintArray(array);
+int diff = MaxMinEllementsDifference(array);
+System.Console.WriteLine(diff);
