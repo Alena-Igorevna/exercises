@@ -1,0 +1,40 @@
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+System.Console.WriteLine("Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.");
+System.Console.Write("Введите кол-во чисел, которое собираетесь вводить -> ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+int [] newArray = new int [size];
+
+void InputNumbers(int size)
+{
+
+    for (int i = 0; i < size; i++)
+    {
+        System.Console.WriteLine($"Введите {i+1} число");
+        newArray[i] = Convert.ToInt32(Console.ReadLine());
+    }
+
+}
+
+int NumberCompare(int [] newArray)
+{
+
+    int count =0;
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        if (newArray[i] > 0)
+        count +=1;
+    }
+    
+    return count;
+
+}   
+
+InputNumbers(size);
+
+System.Console.WriteLine($"Кол-во введенных чисел больше 0 = {NumberCompare(newArray)} ");
+
+
+
